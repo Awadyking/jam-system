@@ -1,13 +1,13 @@
 const URL : string = import.meta.env.VITE_URL
 const token : string= localStorage.getItem("token") ?? ""
 const stringified_USER : string = localStorage.getItem("user") ?? ""
-const USER : {id : string , username : string} | undefined = JSON.parse(stringified_USER)
+const USER : {id : string , username : string} | undefined = undefined
 const isLoading : boolean = false
 const Theme : string  = localStorage.getItem("theme") || "light"
 const element : HTMLElement = document.documentElement 
 
 
-type ValueType = {
+export type ValueType = {
     URL : string
     token : string | undefined
     USER : {id : string , username : string} | undefined
