@@ -1,4 +1,9 @@
 {
     "not_found" : "Not Found" , 
-    "not_found_msg" : "The strawberries have spoiled and no longer suitable for making jam"
+    "not_found_msg" : "The strawberries have spoiled and no longer suitable for making jam" ,
+    "welcome" : "Welcome To  Jam System ,",
+    "welcome_msg" : "The Perfect Place to Manage Your Money Accounts",
+    "login_btn" : "Login",
+    "register_btn" : "Register" ,
+    "dashboard_btn" : "Dashboard"
 }
