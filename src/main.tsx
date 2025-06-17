@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import Main from './components/Main.tsx'
 import { MainStore } from './redux/Store.ts'
+import E404 from './routes/E404.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -17,8 +18,7 @@ createRoot(document.getElementById('root')!).render(
 
               <Routes>
                     <Route path='/' element={<Home/>}></Route>
-                    {/* <Route path="/login" element={<Login/>}></Route>
-                    <Route path="*" element={<E404/>}></Route> */}
+                    <Route path="*" element={<E404/>}></Route>
               </Routes>
         </Main>
         {/* <Loading/> */}
