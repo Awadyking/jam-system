@@ -8,6 +8,7 @@ import { Provider } from 'react-redux'
 import Main from './components/Main.tsx'
 import { MainStore } from './redux/Store.ts'
 import E404 from './routes/E404.tsx'
+import Loading from './components/Loading.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -21,7 +22,7 @@ createRoot(document.getElementById('root')!).render(
                     <Route path="*" element={<E404/>}></Route>
               </Routes>
         </Main>
-        {/* <Loading/> */}
+        <Loading/>
         </BrowserRouter>
       </Provider>
   </StrictMode>,

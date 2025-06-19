@@ -5,5 +5,6 @@
     "welcome_msg" : "The Perfect Place to Manage Your Money Accounts",
     "login_btn" : "Login",
     "register_btn" : "Register" ,
-    "dashboard_btn" : "Dashboard"
+    "dashboard_btn" : "Dashboard" ,
+    "loading" : "Loading ..."
 }
