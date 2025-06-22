@@ -6,5 +6,12 @@
     "login_btn" : "تسجيل الدخول" ,
     "register_btn" : "إنشاء حساب" ,
     "dashboard_btn" : "لوحة التحكم" ,
-    "loading" : "... جار التحميل"
+    "loading" : "... جار التحميل" ,
+        "login_title" : "سجل الدخول إلى حسابك" ,
+    "login_jam" : "هيا نصنع بعض المربى" ,
+    "username" : "اسم المستخدم" ,
+    "password" : "كلمة المرور" ,
+    "forget_password_ques" : "هل نسيت كلمة المرور؟",
+    "show_password" : "اظهار كلمة المرور" ,
+    "new_account_ques" : "ليس لديك حساب؟"
 }

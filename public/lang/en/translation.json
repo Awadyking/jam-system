@@ -6,5 +6,12 @@
     "login_btn" : "Login",
     "register_btn" : "Register" ,
     "dashboard_btn" : "Dashboard" ,
-    "loading" : "Loading ..."
+    "loading" : "Loading ..." ,
+    "login_title" : "Login to Your Account" ,
+    "login_jam" : "Let's Make some Jam" ,
+    "username" : "Username",
+    "password" : "Password" ,
+    "forget_password_ques" : "Forget Password ?" ,
+    "show_password" : "Show Password" ,
+    "new_account_ques" : "Don't have an account ?"
 }

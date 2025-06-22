@@ -1,10 +1,6 @@
-import {createStore, type Store} from "redux"
-import Main_Reducer from "./reducers/Main_reducer"
-export const MainStore : Store<{
-    USER: any;
-    URL: string;
-    token: string;
-    isLoading: boolean;
-    Theme: string;}> = createStore(Main_Reducer)
+import { createStore } from "redux";
+import  Tree  from "./Tree";
 
+const Store = createStore(Tree)
 
+export default Store

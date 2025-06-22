@@ -6,23 +6,28 @@ import Header from './components/Header.tsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import Main from './components/Main.tsx'
-import { MainStore } from './redux/Store.ts'
+import Store from './redux/Store.ts'
 import E404 from './routes/E404.tsx'
 import Loading from './components/Loading.tsx'
+import Login from './routes/Login.tsx'
+import i18n from "i18next"; 
+import Dialog from './components/Dialog.tsx'
+
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-  <Provider store={MainStore} >
+  <Provider store={Store} >
     <BrowserRouter>
       <Header />
       <Main>
-
               <Routes>
                     <Route path='/' element={<Home/>}></Route>
                     <Route path="*" element={<E404/>}></Route>
+                    <Route path='/login' element={<Login/>}></Route>
               </Routes>
         </Main>
         <Loading/>
+        <Dialog/>
         </BrowserRouter>
       </Provider>
   </StrictMode>,

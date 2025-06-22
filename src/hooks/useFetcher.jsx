@@ -6,47 +6,7 @@ export default function useFetcher(method , URL , data , config = {}, dis , func
 
 function Error_Handler(err){
     console.log(err)
-    if(err.response === undefined){
-        dis(Dialog_action({
-            isDialog : true ,
-            isCancelled : false , 
-            isFail : true ,
-            isSuccess : false ,
-            title : "خطأ في الاتصال" ,
-            body : "تم فقد الاتصال بالسيرفر" ,
-            func : () => {
-                dis(Dialog_action({
-                    isDialog : false ,
-                    isCancelled : false , 
-                    isFail : false ,
-                    isSuccess : false ,
-                    title : "" ,
-                    body : "" ,
-                    func : () => {}
-                }))
-            }
-        }))
-    }else{
-        dis(Dialog_action({
-            isDialog : true ,
-            isCancelled : false , 
-            isFail : true ,
-            isSuccess : false ,
-            title : "خطأ في الاتصال" ,
-            body : err.response.data.detail.ar_msg || err.response.data.detail.msg ,
-            func : () => {
-                dis(Dialog_action({
-                    isDialog : false ,
-                    isCancelled : false , 
-                    isFail : false ,
-                    isSuccess : false ,
-                    title : "" ,
-                    body : "" ,
-                    func : () => {}
-                }))
-            }
-        }))
-    }
+    
 }
 
 

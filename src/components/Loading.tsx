@@ -7,8 +7,9 @@ import type { TFunction } from "i18next";
 
 export default function Loading(){
 
-  const {isLoading} : {isLoading : boolean} = useSelector((state : ValueType) => state)
+  const {isLoading} : {isLoading : boolean} = useSelector((state : {Main : ValueType}) => state.Main)
   const {t} : {t : TFunction<"translation" , undefined>} = useTranslation()
+
 if(isLoading){
 return (
 <div className="fixed top-0 w-full h-screen z-50 overflow-hidden bg-gray-500/30 flex flex-col items-center backdrop-blur-lg px-7">

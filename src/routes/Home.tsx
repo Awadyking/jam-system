@@ -1,15 +1,13 @@
 import type { TFunction } from "i18next";
 import { useTranslation } from "react-i18next"; 
-import i18n from "../i18next"; 
 import type { ValueType } from "../redux/reducers/Main_reducer";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 export default function Home() {
-  const {t , i18n} : {t : TFunction<"translation" , undefined> , i18n : any} = useTranslation()
-  const {token} : {token : string | undefined} = useSelector((state : ValueType) => state)
+  const {t} : {t : TFunction<"translation" , undefined> , i18n : any} = useTranslation()
+  const {token}  : {token : string | undefined} = useSelector((state : {Main : ValueType}) => state.Main)
 
-  
 
   return (
     <>
