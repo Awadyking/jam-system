@@ -5,7 +5,7 @@ import HttpApi from 'i18next-http-backend';
 
 const Options = {
   backend:{
-  loadPath: '/lang/{{lng}}/translation.json',
+  loadPath: '/lang/{{lng}}.json',
   } ,
   fallbackLng: "en",
   detection:{

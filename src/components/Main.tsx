@@ -5,10 +5,11 @@ import type { ValueType } from "../redux/reducers/Main_reducer";
 export default function Main({children}: Readonly<{children: React.ReactNode;}>) {
 
 
-const {Theme}  : ValueType = useSelector((state : ValueType) => state)
+const {Theme}  : {Theme : string} = useSelector((state : {Main : ValueType}) => state.Main)
 const element = document.documentElement
 
 useEffect(()=>{
+
         if(Theme == "dark"){ element.classList.add("dark")}
         else{element.classList.remove("dark")}
 

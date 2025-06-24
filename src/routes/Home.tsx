@@ -4,6 +4,7 @@ import type { ValueType } from "../redux/reducers/Main_reducer";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
+
 export default function Home() {
   const {t} : {t : TFunction<"translation" , undefined> , i18n : any} = useTranslation()
   const {token}  : {token : string | undefined} = useSelector((state : {Main : ValueType}) => state.Main)

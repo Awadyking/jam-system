@@ -18,7 +18,6 @@ export type ValueType = {
 const Value : ValueType = { URL , token ,  USER , isLoading , Theme }
 
 export default function Main_Reducer(state = Value, action : {type : string , value : any}){
-
 switch(action.type){
 
 case("USER"):
