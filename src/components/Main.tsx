@@ -25,7 +25,7 @@ useEffect(()=>{
 } , [])
 
     return (
-        <main className="flex h-fit flex-col items-center pt-10 ">
+        <main className=" flex h-fit flex-col items-center pt-10 bg-white dark:bg-gray-800">
             {children}
         </main>
     );

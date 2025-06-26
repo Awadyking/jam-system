@@ -67,6 +67,7 @@
     "msg_1065": "end date for dept must be integer and be from 1 day to 14 days",
     "msg_1066": "this dept is not in this wallet",
     "msg_1067": "this dept is already payed or cancelled",
+    "msg_1068": "username not found",
 
     "not_found" : "Not Found" , 
     "not_found_msg" : "The strawberries have spoiled and no longer suitable for making jam" ,
@@ -74,7 +75,7 @@
     "welcome_msg" : "The Perfect Place to Manage Your Money Accounts",
     "login_btn" : "Login",
     "register_btn" : "Register" ,
-    "dashboard_btn" : "Dashboard" ,
+    "home_btn" : "Home" ,
     "loading" : "Loading ..." ,
     "login_title" : "Login to Your Account" ,
     "login_jam" : "Let's Make some Jam" ,
@@ -93,5 +94,14 @@
     "name" : "Name" ,
     "email" : "Email" ,
     "age" : "Age" , 
-    "confirm_password" : "Confirm Password"
+    "confirm_password" : "Confirm Password" ,
+    "my_profile" : "My Profile", 
+    "settings" : "Settings" , 
+    "wallets_management" : "Wallets Management" , 
+    "bills_management" : "Bills Management" , 
+    "payment_management" : "Payment Management" , 
+    "banks_cards" : "Banks Cards" ,
+    "depts_management" : "Depts Management" ,
+    "notes_management" : "Notes Management" ,
+    "about": "About us"
 }

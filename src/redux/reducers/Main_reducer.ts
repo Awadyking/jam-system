@@ -9,7 +9,7 @@ const element : HTMLElement = document.documentElement
 
 export type ValueType = {
     URL : string
-    token : string | undefined
+    token : string 
     USER : {id : string , username : string} | undefined
     isLoading : boolean
     Theme : string
