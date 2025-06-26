@@ -103,5 +103,14 @@
     "banks_cards" : "Banks Cards" ,
     "depts_management" : "Depts Management" ,
     "notes_management" : "Notes Management" ,
-    "about": "About us"
+    "about": "About us" , 
+    "hello" : "Hello" ,
+    "join_date" : "Join Date" ,
+    "login_history" : "Login History" ,
+    "ip": "IP",
+    "port": "Port",
+    "user_agent" : "User Agent" , 
+    "date" : "Date" ,
+    "time" : "Time" ,
+    "logout" : "Logout"
 }

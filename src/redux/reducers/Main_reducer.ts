@@ -1,7 +1,7 @@
 const URL : string = import.meta.env.VITE_URL
 const token : string= localStorage.getItem("token") ?? ""
-const stringified_USER : string = localStorage.getItem("user") ?? ""
-const USER : {id : string , username : string} | undefined = undefined
+const stringifiedUser : string | null = localStorage.getItem("user")
+const USER : {id : string , username : string , user_email : string , user_age : number , name : string , isBanned : 0 | 1 , join_date : string} | string = stringifiedUser ? JSON.parse(stringifiedUser) : ""
 const isLoading : boolean = false
 const Theme : string  = localStorage.getItem("theme") || "light"
 const element : HTMLElement = document.documentElement 
@@ -10,7 +10,7 @@ const element : HTMLElement = document.documentElement
 export type ValueType = {
     URL : string
     token : string 
-    USER : {id : string , username : string} | undefined
+    USER : {id : string , username : string , user_email : string , user_age : number , name : string , isBanned : 0 | 1 , join_date : string} | string
     isLoading : boolean
     Theme : string
 }

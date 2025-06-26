@@ -2,11 +2,15 @@ import { Link } from "react-router-dom"
 import Ball from "../components/Ball"
 import { useTranslation } from "react-i18next"
 import type { TFunction } from "i18next"
+import type { ValueType } from "../redux/reducers/Main_reducer"
+import { useSelector } from "react-redux"
+import i18n from "../i18next"
 
 
 export default function Home() {
 
   const {t} : {t : TFunction<"translation" , undefined>} = useTranslation()
+  const {USER}  : { USER : any} = useSelector((state : {Main : ValueType}) => state.Main)
 
 const Balls = [
     {
@@ -60,7 +64,9 @@ const Balls = [
 
 
 
-  return (<div className="w-10/12 flex flex-wrap justify-evenly mt-7">
+  return (<>
+  <div className="w-10/12 text-xl font-bold text-black dark:text-white mt-8" dir={i18n.dir()}>{t("hello")}{USER != "" ? " " + USER.name : ""} !</div>
+  <div className="w-10/12 flex flex-wrap justify-evenly mt-1" dir={i18n.dir()}>
   {Balls.map((i : {title : string , img : string , to : string} , index : number)=>{
     return <Link to={i.to}>
         <Ball key={index} title={i.title} img={i.img}/>
@@ -68,5 +74,5 @@ const Balls = [
 })
     }
   </div>
-  )
+ </> )
 }

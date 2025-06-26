@@ -1,7 +1,9 @@
 @import "tailwindcss";
-@plugin "daisyui";
 @custom-variant dark (&:where(.dark, .dark *));
-
+ @plugin "daisyui";
+ @plugin "daisyui" {
+   themes: light --default, dark --prefersdark;
+ }
 #root{
  margin : 0;
  padding : 0;

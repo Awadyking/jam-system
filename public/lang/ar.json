@@ -101,7 +101,16 @@
     "bills_management" : "ادارة الفواتير" , 
     "payment_management" : "ادارة الدفع والاستلام" , 
     "banks_cards" : "بنوك و بطاقات" ,
-    "depts_management" : "ادارة الدين" ,
+    "depts_management" : "ادارة الديون" ,
     "notes_management" : "ادارة الملاحظات" ,
-    "about":  "عنا"
+    "about":  "عنا" ,
+    "hello" : "مرحبا" ,
+    "join_date" : "تاريخ الانضمام" ,
+    "login_history" : "سجل الدخول" ,
+    "ip": "عنوان الشبكة",
+    "port": "المنفذ",
+    "user_agent" : "User Agent" , 
+    "date" : "التاريخ" ,
+    "time" : "الوقت" ,
+    "logout" : "تسجيل الخروج"
 }

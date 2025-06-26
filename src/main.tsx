@@ -14,6 +14,7 @@ import Dialog from './components/Dialog.tsx'
 import Register from './routes/Register.tsx'
 import App from './routes/App.tsx'
 import Home from './routes/Home.tsx'
+import Profile from './routes/Profile.tsx'
 
 
 createRoot(document.getElementById('root')!).render(
@@ -28,6 +29,7 @@ createRoot(document.getElementById('root')!).render(
                     <Route path='/login' element={<Login/>}></Route>
                     <Route path='/register' element={<Register/>}></Route>
                     <Route path='/home' element={<Home/>}></Route>
+                    <Route path='/profile' element={<Profile/>}></Route>
               </Routes>
         </Main>
         <Loading/>

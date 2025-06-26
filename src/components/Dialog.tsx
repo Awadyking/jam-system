@@ -5,11 +5,13 @@ import {  SET_dialog } from "../redux/Types";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import type { TFunction } from "i18next";
+import type { ValueType } from "../redux/reducers/Main_reducer";
 
 
 export default function Dialog(){
 
   const Dialog : Dialog_ValueType = useSelector((state : {Dialog : Dialog_ValueType}) => state.Dialog)
+  const {Theme} : {Theme : string} = useSelector((state : {Main : ValueType}) => state.Main)
     const {t} : {t : TFunction<"translation" , undefined> , i18n : any} = useTranslation()
   const dis = useDispatch()
 
@@ -53,7 +55,7 @@ if(Dialog.isOpen){
     }else if(Dialog.isSuccess){
         return (
 
-            <dialog id="my_modal" className="modal modal-middle">
+            <dialog id="my_modal" className="modal modal-middle" data-theme={Theme}>
                 <div className="modal-box">
                         <form method="dialog">
                             <button className="btn btn-lg btn-circle btn-ghost absolute right-2 top-2">✕</button>
@@ -62,7 +64,7 @@ if(Dialog.isOpen){
                      <div className="w-full flex justify-center items-center">
                      <img src="/img/Success.gif" className="w-40 h-32 self-center"/>
                      </div>
-                    <p className="py-4 m-0 text-center w-full">{Dialog.body}</p>
+                    <p className="py-4 m-0 text-center dark:text-white text-black w-full">{Dialog.body}</p>
                     <div className="modal-action">
                         <button className="btn btn-lg btn-success" onClick={()=>{dis(SET_dialog({isOpen : false , isSuccess : false , isFailed : false , body : "" , title : "" , func : () => {Dialog.func()}})) ; Dialog.func()}}>{t("ok")}</button>
                     </div>

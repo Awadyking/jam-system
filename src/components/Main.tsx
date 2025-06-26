@@ -5,7 +5,7 @@ import type { ValueType } from "../redux/reducers/Main_reducer";
 export default function Main({children}: Readonly<{children: React.ReactNode;}>) {
 
 
-const {Theme}  : {Theme : string} = useSelector((state : {Main : ValueType}) => state.Main)
+const {Theme , token}  : {Theme : string , token : string} = useSelector((state : {Main : ValueType}) => state.Main)
 const element = document.documentElement
 
 useEffect(()=>{
@@ -13,14 +13,14 @@ useEffect(()=>{
         if(Theme == "dark"){ element.classList.add("dark")}
         else{element.classList.remove("dark")}
 
-// let path = window.location.pathname
+let path = window.location.pathname
 
-// // if(!token && 
-// //  path != "/login" &&
-// //  path != "/" && 
-// //  path != "/register"
+if(!token && 
+ path != "/login" &&
+ path != "/" && 
+ path != "/register"
 
-// // ) {window.location.href = "/login"}
+) {window.location.href = "/login"}
 
 } , [])
 
