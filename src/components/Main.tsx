@@ -13,14 +13,14 @@ useEffect(()=>{
         if(Theme == "dark"){ element.classList.add("dark")}
         else{element.classList.remove("dark")}
 
-let path = window.location.pathname
+// let path = window.location.pathname
 
-if(!token && 
- path != "/login" &&
- path != "/" && 
- path != "/register"
+// if(!token && 
+//  path != "/login" &&
+//  path != "/" && 
+//  path != "/register"
 
-) {window.location.href = "/login"}
+// ) {window.location.href = "/login"}
 
 } , [])
 

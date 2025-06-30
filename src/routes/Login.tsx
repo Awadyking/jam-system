@@ -49,7 +49,15 @@ export default function Login() {
                 useFetcher( "POST" , URL + "/auth/login" , {username , password} , {} , dis , (value : any) => {
                     dis(SET_USER_action(value.user_info))
                     dis(SET_token_action(value.token))
-                      dis(SET_dialog({isOpen : true , isSuccess : true , isFailed : false , body : t(`msg_${value.msg_code}`) , title : t("success"), func : () => {nav("/")}}))
+                      dis(SET_dialog({isOpen : true , isSuccess : true , isFailed : false , body : t(`msg_${value.msg_code}`) , title : t("success"), func : () => {
+                        useFetcher("GET" , URL + "/users/get-my-setting" , {} , {headers : {token : value.token}} , dis , (x : any) => {
+                            localStorage.setItem("i18nextLng" , x.lang)
+                            localStorage.setItem("theme" , x.theme)
+                            window.location.href = "/"
+                        } , t)
+
+
+                      }}))
                 } , t)
             }}
             >{t("login_btn")}</button>

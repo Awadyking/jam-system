@@ -15,7 +15,7 @@ import Register from './routes/Register.tsx'
 import App from './routes/App.tsx'
 import Home from './routes/Home.tsx'
 import Profile from './routes/Profile.tsx'
-
+import Settings from './routes/Settings.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -30,6 +30,7 @@ createRoot(document.getElementById('root')!).render(
                     <Route path='/register' element={<Register/>}></Route>
                     <Route path='/home' element={<Home/>}></Route>
                     <Route path='/profile' element={<Profile/>}></Route>
+                    <Route path='/settings' element={<Settings/>}></Route>
               </Routes>
         </Main>
         <Loading/>

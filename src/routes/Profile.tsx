@@ -28,6 +28,7 @@ const dis = useDispatch()
 useEffect(()=>{
     useFetcher("GET" , URL + "/users/get-user-info" ,{} , {headers : {token :token}} , dis , (res : any)=>{
         SET_user(res)
+        localStorage.setItem("user" , JSON.stringify(res))
         useFetcher("GET" , URL + "/users/get-user-login-history" ,{} , {headers : {token :token}} , dis , (s : {data : any})=>{SET_history(s.data)} , t)
     } , t)
 

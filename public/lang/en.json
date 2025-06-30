@@ -68,6 +68,7 @@
     "msg_1066": "this dept is not in this wallet",
     "msg_1067": "this dept is already payed or cancelled",
     "msg_1068": "username not found",
+    "msg_1069" : "your setting has been updated" ,
 
     "not_found" : "Not Found" , 
     "not_found_msg" : "The strawberries have spoiled and no longer suitable for making jam" ,
@@ -112,5 +113,23 @@
     "user_agent" : "User Agent" , 
     "date" : "Date" ,
     "time" : "Time" ,
-    "logout" : "Logout"
+    "logout" : "Logout" , 
+    "general" : "General" , 
+    "security" : "Security" ,
+    "light" : "Light" ,
+    "dark" : "Dark" , 
+    "theme" : "Theme" ,
+    "lang" : "Language" ,
+    "en" : "English" ,
+    "ar" : "Arabic" ,
+    "fr" : "French" ,
+    "es" : "Spanish" ,
+    "de" : "German" , 
+    "cur_pass" : "Current Password" ,
+    "new_pass" : "New Password" ,
+    "confirm_new_pass" : "Confirm New Password" ,
+    "change_pass" : "Change Password" , 
+    "save" : "Save" , 
+    "profile_img" : "Profile Image" ,
+    "optional" : "Optional"
 }
