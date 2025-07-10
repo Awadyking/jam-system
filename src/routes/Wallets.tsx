@@ -19,10 +19,11 @@ export default function Wallets(){
   const [wallet_bank , SET_wallet_bank] : [string , any] = useState("BM")
   const [wallet_currency , SET_wallet_currency] : [string , any] = useState("EGP")
   const [wallet_target , SET_wallet_target] : [string , any] = useState("0")
-  const [wallets , SET_wallets] : [[{w_id : string , w_name : string , amount : number}] , any] = useState([{
+  const [wallets , SET_wallets] : [[{w_id : string , w_name : string , amount : number , type : string}] , any] = useState([{
     w_id : "",
     w_name : "",
-    amount : 0
+    amount : 0 ,
+    type : ""
   }])
 
   
@@ -49,6 +50,7 @@ useEffect(()=>{
     </div>
 
     {wallets.map((wallet , index) => {
+        if(wallet.type === "cash"){
         return <div key={index} className="w-10/12 h-14 border-2 mt-5 border-gray-400 flex items-center justify-evenly px-3 rounded-xl" dir={i18n.dir()}>
            <Link to={`/wallet/${wallet.w_id}`}>
            <p className="text-lg font-bold text-teal-600 underline ">{wallet.w_name}</p>
@@ -56,7 +58,7 @@ useEffect(()=>{
            <p className="text-lg font-bold text-black dark:text-white w-9/12 text-center">{wallet.w_id}</p>
             <p className="text-lg font-bold text-black dark:text-white ">{wallet.amount}</p>
             </div>
-            
+        }    
     })}
     
     

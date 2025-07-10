@@ -28,16 +28,17 @@ const Balls = [
       img : "/img/wallets.png" ,
       to : "/wallets"
     } ,
+        {
+      title : t("payment_management") ,
+      img : "/img/buy.png" ,
+      to : "/payments"
+    } ,
     {
       title : t("bills_management") ,
       img : "/img/bills.png" ,
       to : "/bills"
     } ,
-    {
-      title : t("payment_management") ,
-      img : "/img/buy.png" ,
-      to : "/payments"
-    } ,
+
     {
       title : t("banks_cards") , 
       img : "/img/cards.png" ,

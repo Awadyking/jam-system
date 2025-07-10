@@ -1,6 +1,10 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import type { ValueType } from "../redux/reducers/Main_reducer";
+import { useEffect, useState } from "react";
+import useFetcher from "../hooks/useFetcher";
+import { useTranslation } from "react-i18next";
+import type { TFunction } from "i18next";
 
 
 
@@ -22,7 +26,7 @@ const {URL , token}  : {URL : string , token : string} = useSelector((state : {M
             <img src="/img/notification.svg" className="h-6 w-6" /> 
         </Link>
         <Link to="/profile">  
-            <img src="" className="h-8 w-8 rounded-full" /> 
+            <img src={URL + "/users/get-profile-image?token=" + token} className="h-8 w-8 rounded-full" /> 
         </Link>
     </div>} 
         </header>

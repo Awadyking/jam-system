@@ -90,7 +90,7 @@ useEffect(()=>{
 
 return (<>
         <div className="flex items-center justify-evenly mt-12 lg:w-5/12  w-11/12">
-            <img src="/img/proikjh" className="w-44 h-44 rounded-full"/>
+            <img src={URL + "/users/get-profile-image?token=" + token} className="w-44 h-44 rounded-full"/>
             <p className="text-3xl font-bold text-gray-700 dark:text-white ">@{user.username}</p>
         </div>
         <div className="flex flex-wrap items-center gap-3 justify-center mt-12 lg:w-6/12 w-11/12" dir={i18n.dir()}>
@@ -125,7 +125,7 @@ return (<>
     </thead>
     <tbody>
       {history.map((i : {ip_address : string , user_agent : string , date : string , time : string , port : number} , index : number)=>(
-    <tr>
+    <tr key={index}>
         <th>{index + 1}</th>
         <td>{i.ip_address}</td>
         <td>{i.port}</td>

@@ -17,6 +17,7 @@ import Home from './routes/Home.tsx'
 import Profile from './routes/Profile.tsx'
 import Settings from './routes/Settings.tsx'
 import Wallets from './routes/Wallets.tsx'
+import Payments from './routes/Payments.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -33,6 +34,7 @@ createRoot(document.getElementById('root')!).render(
                     <Route path='/profile' element={<Profile/>}></Route>
                     <Route path='/settings' element={<Settings/>}></Route>
                     <Route path='/wallets' element={<Wallets/>} ></Route>
+                    <Route path='/payments' element={<Payments/>}></Route>
               </Routes>
         </Main>
         <Loading/>

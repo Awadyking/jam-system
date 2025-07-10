@@ -66,8 +66,8 @@ export default function Register() {
                     dis(SET_dialog({isOpen : true , isSuccess : false , isFailed : true , body : t("password_not_match") , title : "" , func : () => {}}))
                     return
                 }
-                useFetcher("POST" , URL + "/auth/register" , {username , password , name , email , age : Number(age)} , {} , dis , (value : {detail : {msg_code : number}}) => {
-                     dis(SET_dialog({isOpen : true , isSuccess : true , isFailed : false , body : t(`msg_${value.detail.msg_code}`) , title : t("success"), func : () => {nav("/login")}}))
+                useFetcher("POST" , URL + "/auth/register" , {username , password , name , email , age : Number(age)} , {} , dis , (value : {msg_code : number}) => {
+                     dis(SET_dialog({isOpen : true , isSuccess : true , isFailed : false , body : t(`msg_${value.msg_code}`) , title : t("success"), func : () => {nav("/login")}}))
                 } , t)
 
             }}

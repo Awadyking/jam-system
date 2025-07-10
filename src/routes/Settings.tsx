@@ -110,8 +110,8 @@ onClick={()=>{
       dis(SET_dialog({isOpen : true , isSuccess : false , isFailed : true , body : t("password_not_match") , title : "" , func : () => {}}))
       return
   }
-useFetcher("PUT" , URL + "/users/update-user-password" , {current_password : cur_pass , new_password : new_pass} , {headers : {token : token}} , dis , (x : {detail : {msg_code : string}}) => {
-  dis(SET_dialog({isOpen : true , isSuccess : true , isFailed : false , body : t(`msg_${x.detail.msg_code}`) , title : t("success"), func : () => {nav("/")}}))
+useFetcher("PUT" , URL + "/users/update-user-password" , {current_password : cur_pass , new_password : new_pass} , {headers : {token : token}} , dis , (x : {msg_code : string}) => {
+  dis(SET_dialog({isOpen : true , isSuccess : true , isFailed : false , body : t(`msg_${x.msg_code}`) , title : t("success"), func : () => {nav("/")}}))
 } , t)
 
 }}
@@ -150,15 +150,15 @@ onClick={()=>{
 if(img !=  null){
   const form = new FormData();
 form.append('new_image', img[0]);
-useFetcher("POST" , URL + "/users/change-profile-image" , form , {headers : {token : token}} , dis , (x : {detail : {msg_code : string}}) => {
-  dis(SET_dialog({isOpen : true , isSuccess : true , isFailed : false , body : t(`msg_${x.detail.msg_code}`) , title : t("success"), func : () => {
+useFetcher("POST" , URL + "/users/change-profile-image" , form , {headers : {token : token}} , dis , (x  : {msg_code : string}) => {
+  dis(SET_dialog({isOpen : true , isSuccess : true , isFailed : false , body : t(`msg_${x.msg_code}`) , title : t("success"), func : () => {
 
 if( name === "" || email === "" || age === ""){
   dis(SET_dialog({isOpen : true , isSuccess : false , isFailed : true , body : t("empty") , title : "" , func : () => {}}))
       return
        }
-useFetcher("PUT" , URL + "/users/update-user-info" , {email : email == cur_email ? "" : email , name : name , age : Number(age)} , {headers : {token : token}} , dis , (x : {detail : {msg_code : string}}) => {
-  dis(SET_dialog({isOpen : true , isSuccess : true , isFailed : false , body : t(`msg_${x.detail.msg_code}`) , title : t("success"), func : () => {nav("/")}}))
+useFetcher("PUT" , URL + "/users/update-user-info" , {email : email == cur_email ? "" : email , name : name , age : Number(age)} , {headers : {token : token}} , dis , (x : {msg_code : string}) => {
+  dis(SET_dialog({isOpen : true , isSuccess : true , isFailed : false , body : t(`msg_${x.msg_code}`) , title : t("success"), func : () => {nav("/")}}))
 } , t)
 
   }}))
@@ -168,8 +168,8 @@ useFetcher("PUT" , URL + "/users/update-user-info" , {email : email == cur_email
   dis(SET_dialog({isOpen : true , isSuccess : false , isFailed : true , body : t("empty") , title : "" , func : () => {}}))
       return
        }
-useFetcher("PUT" , URL + "/users/update-user-info" , {email : email == cur_email ? "" : email , name : name , age : Number(age)} , {headers : {token : token}} , dis , (x : {detail : {msg_code : string}}) => {
-  dis(SET_dialog({isOpen : true , isSuccess : true , isFailed : false , body : t(`msg_${x.detail.msg_code}`) , title : t("success"), func : () => {nav("/")}}))
+useFetcher("PUT" , URL + "/users/update-user-info" , {email : email == cur_email ? "" : email , name : name , age : Number(age)} , {headers : {token : token}} , dis , (x : {msg_code : string}) => {
+  dis(SET_dialog({isOpen : true , isSuccess : true , isFailed : false , body : t(`msg_${x.msg_code}`) , title : t("success"), func : () => {nav("/")}}))
 } , t)
 }
 
