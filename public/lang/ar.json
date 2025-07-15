@@ -215,5 +215,14 @@
     "category_transportation" : "مواصلات",
     "category_other" : "أخرى" ,
     "select_proccess" : "اختر عملية" ,
-    "confirm" : "تاكيد"
+    "confirm" : "تاكيد" ,
+    "new_bill" : "فاتورة جديدة" ,
+    "bill_id" : "معرف الفاتورة" ,
+    "proccess_id" : "معرف العملية" ,
+    "creator_name" : "اسم المنشئ" ,
+    "bill_image" : "صورة الفاتورة" ,
+    "show_image" : "اظهار الصورة" ,
+    "enter_bill_data" : "ادخل بيانات الفاتورة" ,
+    "del_bill" : "حذف الفاتورة" ,
+    "no_bills" : "لا يوجد فواتير"
 }

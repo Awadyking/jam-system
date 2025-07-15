@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import useFetcher from "../hooks/useFetcher"
 import { useDispatch, useSelector } from "react-redux"
 import type { ValueType } from "../redux/reducers/Main_reducer"
-import { useNavigate } from "react-router-dom"
 import type { TFunction } from "i18next"
 import { useTranslation } from "react-i18next"
 import i18n from "../i18next"
@@ -54,7 +53,7 @@ export default function Payments() {
 
     useEffect(()=>{
       if(selected_Wallet != "default"){
-   useFetcher("GET" , URL + "/wallet/get-wallet-details?w_id=" + selected_Wallet ,{} , {headers : {token :token}} , dis , (res : any)=>{console.log(res) ;SET_selected_Wallet_details(res)} , t)      
+   useFetcher("GET" , URL + "/wallet/get-wallet-details?w_id=" + selected_Wallet ,{} , {headers : {token :token}} , dis , (res : any)=>{SET_selected_Wallet_details(res)} , t)      
       }
     } , [selected_Wallet])
     

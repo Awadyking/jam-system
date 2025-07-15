@@ -215,7 +215,16 @@
     "category_transportation" : "Transportation",
     "category_other" : "Other" ,
     "select_proccess" : "Select Proccess" ,
-    "confirm" : "Confirm"
+    "confirm" : "Confirm" , 
+    "new_bill" : "New Bill" ,
+    "bill_id" : "Bill ID" ,
+    "proccess_id" : "Proccess ID" ,
+    "creator_name" : "Creator Name" ,
+    "bill_image" : "Bill Image" ,
+    "show_image" : "Show Image" ,
+    "enter_bill_data" : "Enter Bill Data" ,
+    "del_bill" : "Delete Bill" ,
+    "no_bills" : "No Bills Found"
 
-    
+
 }
